@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+}
+
+.sky{
+    background-color: skyblue;
+    height: 40vh;
+    position: relative;
+
+
+}
+
+.grass{
+    background-color: green;
+    height: 30vh;
+    position: relative;
+}
+
+.road{
+    background-color: dimgray;
+    height: 27vh;
+    border-top:10px solid gray;
+    border-bottom:10px solid gray;
+    position: relative;
+}
+
+.lines{
+    height: 0;
+    border: 5px dashed white;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.icon{
+    position: absolute;
+    top: 75%;
+    color: rgb(30, 7, 54);
+    animation-name: car;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
+
+   
+}
+
+.icon-one{
+    position: absolute;
+    top: 87%;
+    animation-name: car-one;
+    animation-duration:7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
+   
+
+
+}
+
+.icon-two{
+    position: absolute;
+    top: 50%;
+    animation-name: helicopter;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.cloud{
+    position: absolute;
+}
+
+.cloud:nth-child(1){
+    width: 100%;
+    top:80px;
+    left:30px;
+    opacity:0.6;
+    animation-name: wind;
+    animation-duration:10s;
+    animation-direction: reverse;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear
+}
+
+.cloud:nth-child(2){
+    animation-name:wind;
+    animation-duration:8s;
+    animation-direction:normal;
+    width: 100%;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear
+}
+   
+
+
+@keyframes car {
+ from{ transform:translateX(-50)} 
+ to{transform:translateX(1300px)}   
+}
+
+@keyframes car-one {
+    from{ transform:translateX(-30)} 
+    to{transform:translateX(1300px)}   
+   }
+
+@keyframes helicopter {
+from{ transform:translateX(-30)} 
+to{transform:translateX(1300px)}   
+}
+
+@keyframes wind {
+    from{ transform: translateX(-500px);} 
+    to{transform:translateX(1300px)}   
+    }
